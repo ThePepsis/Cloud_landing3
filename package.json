@@ -1,0 +1,24 @@
+{
+  "name": "cloud_landing3",
+  "version": "1.0.0",
+  "description": "figma landing page №3",
+  "homepage": "https://github.com/ThePepsis/Cloud_landing3#readme",
+  "bugs": {
+    "url": "https://github.com/ThePepsis/Cloud_landing3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThePepsis/Cloud_landing3.git"
+  },
+  "license": "ISC",
+  "author": "ThePepsis",
+  "type": "commonjs",
+  "source": "index.html",
+  "scripts": {
+    "sass:watch": "sass --style=expanded --watch styles:dist"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "sass": "^1.102.0"
+  }
+}
