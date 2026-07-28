@@ -1,0 +1,30 @@
+@use "variables" as v;
+
+%hover-black {
+  &:hover {
+    color: v.$black-co;
+  }
+}
+
+%hover-black-icon {
+  &:hover {
+    stroke: v.$black-co;
+  }
+}
+
+%after-black-line {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 100%;
+    background: v.$black-co;
+    height: 1px;
+    transition: right 0.22s;
+  }
+
+  &:hover::after {
+    right: 0;
+  }
+}

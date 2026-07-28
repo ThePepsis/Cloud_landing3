@@ -1,57 +1,3 @@
-<!-- 
-<svg>
-  <use href="assets/sprites.svg#earth-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#burger-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#bulb-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#design-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#dev-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#maintenance-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#testing-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#integration-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#arrow-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#linkedin-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#facebook-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#inst-icon" />
-</svg>
-
-<svg>
-  <use href="assets/sprites.svg#cross-icon" />
-</svg> 
--->
-
 <!doctype html>
 <html lang="en">
 
@@ -69,7 +15,40 @@
 </head>
 
 <body>
-  <header class="header">hello</header>
+  <header class="header"  aria-label="header section">
+    <div class="container">
+      <nav class="header__nav nav" aria-label="header navigation">
+        <div class="nav__logo">
+          <a href="#" class="nav__logo-link" aria-label="logo link to main page">CLOUD <span>FLEX</span></a>
+        </div>
+
+        <div class="nav__links">
+          <ul class="nav__links-list list" aria-label="header navigation links">
+            <li class="list__item">
+              <a href="#" class="list__item-link" aria-label="info about us">about us</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__item-link" aria-label="contact us">contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__covid-wrapper covid">
+          <a href="#" class="covid__link" aria-label="covid-19 update">COVID-19 UPDATE</a>
+        </div>
+        
+        <div class="nav__earth-wrapper earth">
+          <a href="#" class="earth__link" aria-label="earth info">
+            <svg class="earth__link-icon" aria-label="earth img">
+              <use href="assets/sprites.svg#earth-icon"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
   <main class="main"></main>
 </body>
 
