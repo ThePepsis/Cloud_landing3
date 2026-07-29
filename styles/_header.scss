@@ -16,85 +16,89 @@
     }
   }
 
-  .nav {
-    height: 50px;
-    @include m.d-flex(start);
-    color: v.$white-co;
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
 
-    &__logo {
-      width: 250px;
-      height: 100%;
-      @include m.d-flex();
+    .nav {
+      height: 50px;
+      @include m.d-flex(start);
+      color: v.$white-co;
 
-      border: {
-        right: 1px solid v.$white-co;
-      }
+      &__logo {
+        width: 250px;
+        height: 100%;
+        @include m.d-flex();
 
-      &-link {
-        font-size: 25px;
-        font-weight: 500;
-
-        span {
-          font-weight: 700;
+        border: {
+          right: 1px solid v.$white-co;
         }
 
-        @extend %hover-black;
+        &-link {
+          @include m.font(25px, 500, v.$white-co);
+
+          span {
+            font-weight: 700;
+          }
+
+          @extend %hover-black, %focus-v;
+        }
       }
-    }
 
-    &__links {
-      flex-grow: 1;
+      &__links {
+        flex-grow: 1;
 
-      .list {
-        @include m.d-flex(start, center, nowrap, row, min(100px, 5vw), 0);
-        padding: 0 0 0 min(100px, 5vw);
+        .list {
+          @include m.d-flex(start, center, nowrap, row, min(100px, 5vw), 0);
+          padding: 0 0 0 min(100px, 5vw);
 
-        &__item {
-          &-link {
-            font-size: 22px;
-            font-weight: 400;
-            position: relative;
-            @extend %hover-black;
-            @extend %after-black-line;
+          &__item {
+            &-link {
+              @include m.font(22px, 400, v.$white-co);
+              position: relative;
+              @extend %hover-black, %after-black-line, %focus-v;
+            }
+          }
+        }
+
+        @media (max-width: v.$media-lg) {
+          .list {
+            @include m.d-flex(center, center, nowrap, row, min(100px, 5vw), 0);
+            padding: 0;
           }
         }
       }
 
-      @media (max-width: v.$media-lg) {
-        .list {
-          @include m.d-flex(center, center, nowrap, row, min(100px, 5vw), 0);
-          padding: 0;
+      .covid {
+        height: 100%;
+        padding: 0 30px;
+        @include m.d-flex();
+
+        border: {
+          left: 1px solid v.$white-co;
+          right: 1px solid v.$white-co;
+        }
+
+        &__link {
+          @include m.font(16px, 700, v.$white-co);
+          @extend %hover-black, %focus-v;
         }
       }
-    }
 
-    .covid {
-      height: 100%;
-      padding: 0 30px;
-      @include m.d-flex();
+      .earth {
+        width: 90px;
+        @include m.d-flex();
 
-      border: {
-        left: 1px solid v.$white-co;
-        right: 1px solid v.$white-co;
-      }
+        &__link {
+          @extend %focus-v;
 
-      &__link {
-        font-size: 16px;
-        font-weight: 700;
-        @extend %hover-black;
-      }
-    }
-
-    .earth {
-      width: 90px;
-      @include m.d-flex();
-
-      &__link {
-        &-icon {
-          width: 27px;
-          height: 28px;
-          fill: v.$white-co;
-          @extend %hover-black-icon;
+          &-icon {
+            @include m.d-flex();
+            width: 27px;
+            height: 28px;
+            fill: v.$white-co;
+            @extend %hover-black-icon;
+          }
         }
       }
     }

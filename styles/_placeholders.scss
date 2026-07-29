@@ -1,4 +1,11 @@
 @use "variables" as v;
+@use "sass:color";
+
+%focus-v {
+  &:focus-visible {
+    outline: 2px solid v.$white-co;
+  }
+}
 
 %hover-black {
   &:hover {
@@ -8,7 +15,14 @@
 
 %hover-black-icon {
   &:hover {
-    stroke: v.$black-co;
+    fill: v.$black-co;
+  }
+}
+
+%hover-black-btn {
+  &:hover {
+    cursor: pointer;
+    background: adjust-color(v.$black-co, $alpha: -0.6);
   }
 }
 

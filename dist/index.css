@@ -21,29 +21,36 @@ button {
   padding: 0;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 a {
   text-decoration: none;
   color: unset;
+}
+a:focus {
+  outline: none;
 }
 
 ul {
   list-style: none;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
+.header .container .nav__logo-link:focus-visible, .header .container .nav__links .list__item-link:focus-visible, .header .container .nav .covid__link:focus-visible, .header .container .nav .earth__link:focus-visible {
+  outline: 2px solid #fff;
 }
 
-.header .nav__logo-link:hover, .header .nav__links .list__item-link:hover, .header .nav .covid__link:hover {
+.header .container .nav__logo-link:hover, .header .container .nav__links .list__item-link:hover, .header .container .nav .covid__link:hover {
   color: #000;
 }
 
-.header .nav .earth__link-icon:hover {
-  stroke: #000;
+.header .container .nav .earth__link-icon:hover {
+  fill: #000;
 }
 
-.header .nav__links .list__item-link::after {
+.header .container .nav__links .list__item-link::after {
   content: "";
   position: absolute;
   top: 25px;
@@ -53,7 +60,7 @@ ul {
   height: 1px;
   transition: right 0.22s;
 }
-.header .nav__links .list__item-link:hover::after {
+.header .container .nav__links .list__item-link:hover::after {
   right: 0;
 }
 
@@ -65,7 +72,11 @@ ul {
   border-bottom-style: solid;
   border-bottom-color: #fff;
 }
-.header .nav {
+.header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header .container .nav {
   height: 50px;
   display: flex;
   justify-content: start;
@@ -76,7 +87,7 @@ ul {
   row-gap: 0;
   color: #fff;
 }
-.header .nav__logo {
+.header .container .nav__logo {
   width: 250px;
   height: 100%;
   display: flex;
@@ -88,17 +99,19 @@ ul {
   row-gap: 0;
   border-right: 1px solid #fff;
 }
-.header .nav__logo-link {
+.header .container .nav__logo-link {
   font-size: 25px;
   font-weight: 500;
+  color: #fff;
+  font-style: normal;
 }
-.header .nav__logo-link span {
+.header .container .nav__logo-link span {
   font-weight: 700;
 }
-.header .nav__links {
+.header .container .nav__links {
   flex-grow: 1;
 }
-.header .nav__links .list {
+.header .container .nav__links .list {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -108,13 +121,15 @@ ul {
   row-gap: 0;
   padding: 0 0 0 min(100px, 5vw);
 }
-.header .nav__links .list__item-link {
+.header .container .nav__links .list__item-link {
   font-size: 22px;
   font-weight: 400;
+  color: #fff;
+  font-style: normal;
   position: relative;
 }
 @media (max-width: 992px) {
-  .header .nav__links .list {
+  .header .container .nav__links .list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +140,7 @@ ul {
     padding: 0;
   }
 }
-.header .nav .covid {
+.header .container .nav .covid {
   height: 100%;
   padding: 0 30px;
   display: flex;
@@ -138,11 +153,13 @@ ul {
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
 }
-.header .nav .covid__link {
+.header .container .nav .covid__link {
   font-size: 16px;
   font-weight: 700;
+  color: #fff;
+  font-style: normal;
 }
-.header .nav .earth {
+.header .container .nav .earth {
   width: 90px;
   display: flex;
   justify-content: center;
@@ -152,7 +169,14 @@ ul {
   column-gap: 0;
   row-gap: 0;
 }
-.header .nav .earth__link-icon {
+.header .container .nav .earth__link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 0;
+  row-gap: 0;
   width: 27px;
   height: 28px;
   fill: #fff;

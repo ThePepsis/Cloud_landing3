@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 @mixin d-flex($justify: center, $align: center, $wrap: nowrap, $direction: row, $column-gap: 0, $row-gap: 0) {
   display: flex;
   justify-content: $justify;
@@ -6,4 +8,11 @@
   flex-direction: $direction;
   column-gap: $column-gap;
   row-gap: $row-gap;
+}
+
+@mixin font($size: 16px, $weight: 400, $color: v.$black-co, $style: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-style: $style;
 }
