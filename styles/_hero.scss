@@ -1,0 +1,38 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+
+.hero {
+  margin: 155px 0 70px 0;
+  position: relative;
+  background: url(../assets/webp/cloud.webp) center/contain no-repeat;
+
+  .container {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: 930px;
+    margin: 0 auto;
+    position: relative;
+
+    &__title {
+      @include m.font(120px, 700);
+      line-height: 1;
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 18px;
+      right: -10px;
+      width: 380px;
+      height: 80px;
+      border-radius: 90px;
+      @include m.font(28px, 500, v.$white-co);
+      background: v.$black-co;
+
+      @extend %hover-black-btn, %focus-v;
+    }
+  }
+}

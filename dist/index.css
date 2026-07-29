@@ -38,7 +38,7 @@ ul {
   list-style: none;
 }
 
-.header .container .nav__logo-link:focus-visible, .header .container .nav__links .list__item-link:focus-visible, .header .container .nav .covid__link:focus-visible, .header .container .nav .earth__link:focus-visible {
+.hero .content__btn:focus-visible, .header .container .nav__logo-link:focus-visible, .header .container .nav__links .list__item-link:focus-visible, .header .container .nav .covid__link:focus-visible, .header .container .nav .earth__link:focus-visible {
   outline: 2px solid #fff;
 }
 
@@ -48,6 +48,11 @@ ul {
 
 .header .container .nav .earth__link-icon:hover {
   fill: #000;
+}
+
+.hero .content__btn:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .header .container .nav__links .list__item-link::after {
@@ -180,6 +185,41 @@ ul {
   width: 27px;
   height: 28px;
   fill: #fff;
+}
+
+.hero {
+  margin: 155px 0 70px 0;
+  position: relative;
+  background: url(../assets/webp/cloud.webp) center/contain no-repeat;
+}
+.hero .container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.hero .content {
+  max-width: 930px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero .content__title {
+  font-size: 120px;
+  font-weight: 700;
+  color: #000;
+  font-style: normal;
+  line-height: 1;
+}
+.hero .content__btn {
+  position: absolute;
+  bottom: 18px;
+  right: -10px;
+  width: 380px;
+  height: 80px;
+  border-radius: 90px;
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  font-style: normal;
+  background: #000;
 }
 
 /*# sourceMappingURL=index.css.map */
