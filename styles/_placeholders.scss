@@ -13,6 +13,12 @@
   }
 }
 
+%hover-white {
+  &:hover {
+    color: v.$white-co;
+  }
+}
+
 %hover-black-icon {
   &:hover {
     fill: v.$black-co;

@@ -1,6 +1,11 @@
-@use 'variables' as v;
+@use "variables" as v;
 
-@mixin d-flex($justify: center, $align: center, $wrap: nowrap, $direction: row, $column-gap: 0, $row-gap: 0) {
+@mixin d-flex($justify: center,
+  $align: center,
+  $wrap: nowrap,
+  $direction: row,
+  $column-gap: 0,
+  $row-gap: 0) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -15,4 +20,24 @@
   font-weight: $weight;
   color: $color;
   font-style: $style;
+}
+
+@mixin position($type: absolute,
+  $z-index: 1,
+  $inset: -1,
+  $top-or-bottom: top,
+  $right-or-left: left,
+  $vertical-value: 0,
+  $horizontal-value: 0) {
+  position: $type;
+  z-index: $z-index;
+
+  @if $inset >-1 {
+    inset: $inset;
+  }
+
+  @else {
+    #{$top-or-bottom}: $vertical-value;
+    #{$right-or-left}: $horizontal-value;
+  }
 }
