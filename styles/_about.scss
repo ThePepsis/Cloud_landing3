@@ -1,0 +1,58 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'sass:color';
+
+.about {
+  padding: 120px 0 180px 0;
+
+  .container {
+    max-width: 930px;
+    margin: 0 auto;
+
+    .about__title {
+      text-align: center;
+      @include m.font(60px, 400, v.$white-co);
+    }
+
+    .about__cards {
+      height: 500px;
+      @include m.d-flex(space-between, center, wrap, 70px, 100px);
+
+      .card {
+        padding: 10px;
+        width: 180px;
+        height: 200px;
+        border-radius: 20px;
+        background: color.adjust(v.$white-co, $alpha: -0.8);
+        @include m.d-flex(center, center, nowrap, column, 0, 5px);
+        cursor: pointer;
+
+        &__icon {
+          width: 50px;
+          height: 40px;
+          fill: v.$black-co;
+        }
+
+        &__title {
+          @include m.font(18px, 600);
+        }
+
+        &__desc {
+          text-align: center;
+          @include m.font(16px, 300);
+        }
+
+        &:hover {
+          .card__icon {
+            fill: v.$white-co;
+          }
+
+          .card__title,
+          .card__desc {
+            color: v.$white-co;
+          }
+        }
+      }
+    }
+  }
+}
