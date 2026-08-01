@@ -480,13 +480,32 @@ ul {
   flex-direction: column;
   column-gap: 0;
   row-gap: 5px;
+  cursor: pointer;
 }
 .about .container .about__cards .card__icon {
   width: 50px;
   height: 40px;
+  fill: #000;
+}
+.about .container .about__cards .card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  font-style: normal;
 }
 .about .container .about__cards .card__desc {
   text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: #000;
+  font-style: normal;
+}
+.about .container .about__cards .card:hover .card__icon {
+  fill: #fff;
+}
+.about .container .about__cards .card:hover .card__title,
+.about .container .about__cards .card:hover .card__desc {
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */
