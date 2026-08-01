@@ -3,10 +3,10 @@
 @use 'sass:color';
 
 .about {
-  padding: 120px 0 180px 0;
+  border-bottom: 1px solid v.$white-co;
 
   .container {
-    max-width: 930px;
+    max-width: 950px;
     margin: 0 auto;
 
     .about__title {
@@ -15,8 +15,8 @@
     }
 
     .about__cards {
-      height: 500px;
-      @include m.d-flex(space-between, center, wrap, 70px, 100px);
+      padding: 80px 15px 185px;
+      @include m.d-flex(center, center, wrap, row, min(190px, 10vw), min(70px, 5vh));
 
       .card {
         padding: 10px;
@@ -43,6 +43,8 @@
         }
 
         &:hover {
+          background: color.adjust(v.$black-co, $alpha: -0.9);
+
           .card__icon {
             fill: v.$white-co;
           }
@@ -50,6 +52,30 @@
           .card__title,
           .card__desc {
             color: v.$white-co;
+          }
+        }
+      }
+    }
+
+    @media (max-width: v.$media-sm) {
+      .about__title {
+        display: none;
+      }
+
+      .about__cards {
+        padding: 0px 15px 95px;
+
+        .card {
+          width: 140px;
+          height: 155px;
+
+          &__title {
+            @include m.font(14px, 600);
+          }
+
+          &__desc {
+            text-align: center;
+            @include m.font(11px, 300);
           }
         }
       }
