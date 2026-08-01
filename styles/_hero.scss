@@ -6,9 +6,8 @@
 .hero {
   position: relative;
   max-width: 1260px;
-  height: 830px;
   margin: 0 auto;
-  padding: 140px 0 0;
+  padding: 150px 0 120px 0;
   background: url(../assets/webp/cloud.webp) center/contain no-repeat;
 
   .content {
@@ -111,7 +110,7 @@
       @include m.d-flex(start, center, nowrap, column);
 
       &-img {
-        @include m.position(absolute, 1, -1, top, left, -45px, -15px);
+        @include m.position(absolute, 2, -1, top, left, -45px, -15px);
       }
 
       &-text {
@@ -171,21 +170,19 @@
     }
 
     @media (max-width: v.$media_lg) {
-      @include m.position(absolute, 1, -1, bottom, left, 130px, 10px);
+      @include m.position(absolute, 1, -1, bottom, left, 220px, 10px);
     }
 
     @media (max-width: v.$media_sm) {
-      @include m.position(absolute, 1, -1, bottom, left, 200px, 10px);
+      @include m.position(absolute, 1, -1, bottom, left, 170px, 0);
     }
   }
 
 
   @media (max-width: v.$media_md) {
-    padding: 110px 10px 0;
+    padding: 110px 10px 50px;
     background: url(../assets/webp/cloud.webp) 0 25%/contain no-repeat;
   }
 
-  @media (max-width: v.$media_sm) {
-    height: 700px;
-  }
+  @media (max-width: v.$media_sm) {}
 }
