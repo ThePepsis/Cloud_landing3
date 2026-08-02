@@ -452,13 +452,12 @@ ul {
 }
 .about .container .about__cards {
   padding: 80px 15px 185px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  column-gap: min(190px, 10vw);
-  row-gap: min(70px, 5vh);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: min(70px, 10vw);
+  column-gap: min(190px, 5vh);
+  grid-template-areas: "bulb design dev" "maintenance testing integration";
 }
 .about .container .about__cards .card {
   padding: 10px;
@@ -502,6 +501,46 @@ ul {
 .about .container .about__cards .card:hover .card__title,
 .about .container .about__cards .card:hover .card__desc {
   color: #fff;
+}
+.about .container .about__cards .card--bulb {
+  grid-area: bulb;
+  align-self: center;
+  justify-self: start;
+}
+.about .container .about__cards .card--design {
+  grid-area: design;
+  justify-self: center;
+}
+.about .container .about__cards .card--dev {
+  grid-area: dev;
+  justify-self: end;
+}
+.about .container .about__cards .card--maintenance {
+  grid-area: maintenance;
+  justify-self: start;
+}
+.about .container .about__cards .card--testing {
+  grid-area: testing;
+  justify-self: center;
+}
+.about .container .about__cards .card--integration {
+  grid-area: integration;
+  justify-self: end;
+}
+@media (max-width: 768px) {
+  .about .container .about__cards {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "bulb design" "dev maintenance" "testing integration";
+  }
+  .about .container .about__cards .card--bulb,
+  .about .container .about__cards .card--design,
+  .about .container .about__cards .card--dev,
+  .about .container .about__cards .card--maintenance,
+  .about .container .about__cards .card--testing,
+  .about .container .about__cards .card--integration {
+    justify-self: center;
+  }
 }
 @media (max-width: 576px) {
   .about .container .about__title {
