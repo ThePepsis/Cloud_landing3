@@ -436,9 +436,6 @@ ul {
     background: url(../assets/webp/cloud.webp) 0 25%/contain no-repeat;
   }
 }
-.about {
-  border-bottom: 1px solid #fff;
-}
 .about .container {
   max-width: 950px;
   margin: 0 auto;
