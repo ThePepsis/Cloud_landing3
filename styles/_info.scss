@@ -1,0 +1,141 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.info {
+  padding: 150px 10px 0;
+
+  &--title {
+    @include m.font(45px, 400, v.$white-co);
+  }
+
+  &--desc {
+    max-width: 590px;
+    margin: 50px 0 0 0;
+    line-height: 30px;
+    @include m.font(20px, 300, v.$white-co);
+  }
+
+  &__quality {
+    width: 100%;
+    height: 400px;
+    background: url('../assets/webp/desktop.webp') 100% 100%/contain no-repeat;
+  }
+
+  &__touch {
+    margin: 150px 0 350px 0;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    @include m.d-flex(end, end, nowrap, column);
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 110%;
+      rotate: z 15deg;
+      @include m.position(absolute, -1, -1, top, right, -60px, 40%);
+      background: url('../assets/webp/telephone.webp') 0 0/contain no-repeat;
+    }
+
+    &-desc {
+      text-align: right;
+      max-width: 500px;
+    }
+  }
+
+  &__approach {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    @include m.d-flex(center, start, nowrap, column);
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      @include m.position(absolute, -1, -1, bottom, right, 0, 0);
+      background: url('../assets/webp/cactus.webp') 100% 100%/contain no-repeat;
+    }
+
+    &-desc {
+      max-width: 730px;
+    }
+  }
+
+
+
+  @media (max-width: v.$media-xl) {
+    &__quality {
+      height: 600px;
+      background: linear-gradient(360deg, rgba(255, 255, 255, 0) 30%, v.$blue-co 90%),
+        url('../assets/webp/desktop.webp') 100% 50%/600px no-repeat;
+    }
+
+    &__touch {
+      margin: 100px 0 200px 0;
+    }
+  }
+
+  @media (max-width: v.$media-lg) {
+    &__approach {
+      height: 700px;
+      @include m.d-flex(start, start, nowrap, column);
+
+      &-desc {
+        max-width: 410px;
+      }
+    }
+  }
+
+  @media (max-width: v.$media-md) {
+    padding: 80px 10px 0;
+
+    &__quality {
+      background: url('../assets/webp/desktop.webp') 100% 70%/400px no-repeat;
+    }
+
+    &__approach {
+      &::after {
+        height: 80%;
+      }
+    }
+  }
+
+  @media (max-width: v.$media-sm) {
+    &__touch {
+      margin: 0 0 50px 0;
+      @include m.d-flex(start, end, nowrap, column);
+
+      &::before {
+        width: 130%;
+        rotate: z 70deg;
+        @include m.position(absolute, -1, -1, top, right, 0px, 70%);
+      }
+    }
+
+    &__approach {
+      height: 600px;
+
+      &::after {
+        height: 60%;
+        @include m.position(absolute, -1, -1, bottom, right, 0, -25px);
+      }
+    }
+  }
+
+  @media (max-width: v.$media-min) {
+    &--title {
+      @include m.font(35px, 400, v.$white-co);
+    }
+
+    &--desc {
+      max-width: 330px;
+      margin: 30px auto;
+      @include m.font(16px, 300, v.$white-co);
+    }
+
+    &__quality {
+      background: url('../assets/webp/desktop.webp') 160px 60%/400px no-repeat;
+    }
+  }
+}
