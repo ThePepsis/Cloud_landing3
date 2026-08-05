@@ -16,7 +16,8 @@ h5,
 h6,
 ul,
 p,
-button {
+button,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -728,6 +729,104 @@ hr {
   }
   .info__quality {
     background: url("../assets/webp/desktop.webp") 160px 60%/400px no-repeat;
+  }
+}
+
+.experience {
+  text-align: center;
+}
+.experience__title {
+  margin: 200px 0 100px;
+  font-size: 60px;
+  font-weight: 400;
+  color: #fff;
+  font-style: normal;
+}
+@media (max-width: 576px) {
+  .experience__title {
+    margin: 100px 0 60px;
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+    font-style: normal;
+  }
+}
+.experience__cards-wrapper {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+.experience__cards-wrapper .card-img {
+  position: relative;
+  width: 325px;
+  height: 295px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 0;
+}
+.experience__cards-wrapper .card-img__title {
+  font-size: 23px;
+  font-weight: 400;
+  color: #fff;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 0;
+  row-gap: 0;
+  flex-grow: 1;
+}
+.experience__cards-wrapper .card-img__preview {
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
+}
+.experience__cards-wrapper .card-img__btn {
+  position: absolute;
+  z-index: 1;
+  bottom: -20px;
+  left: -30px;
+  width: 120px;
+  height: 90px;
+  border-radius: 20px;
+  background: #fff;
+  rotate: z 7deg;
+  transition: rotate 0.22s;
+}
+.experience__cards-wrapper .card-img__btn-icon {
+  width: 36px;
+  height: 23px;
+  fill: #000;
+  rotate: z -7deg;
+  translate: 12px -3px;
+}
+.experience__cards-wrapper .card-img__btn:hover {
+  cursor: pointer;
+  rotate: z -7deg;
+  scale: 1.3;
+}
+.experience__cards-wrapper .card-img:hover {
+  box-shadow: 0 8px 20px 12px rgba(0, 0, 0, 0.25), inset 0 -5px 70px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+}
+@media (max-width: 428px) {
+  .experience__cards-wrapper .card-img {
+    width: 300px;
   }
 }
 

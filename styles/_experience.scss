@@ -1,0 +1,79 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+.experience {
+  text-align: center;
+
+  &__title {
+    margin: 200px 0 100px;
+    @include m.font(60px, 400, v.$white-co);
+
+    @media (max-width: v.$media_sm) {
+      margin: 100px 0 60px;
+      @include m.font(35px, 400, v.$white-co);
+    }
+  }
+
+  &__cards-wrapper {
+    padding: 0 15px;
+    @include m.d-flex(space-evenly, center, wrap, row, 20px, 30px);
+
+    .card-img {
+      position: relative;
+      width: 325px;
+      height: 295px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: color.adjust(v.$white-co, $alpha: -0.8);
+      @include m.d-flex(space-between, center, nowrap, column);
+
+      &__title {
+        @include m.font(23px, 400, v.$white-co);
+        @include m.d-flex();
+        flex-grow: 1;
+      }
+
+      &__preview {
+        object-fit: cover;
+        width: 100%;
+        height: 220px;
+      }
+
+      &__btn {
+        @include m.position(absolute, 1, -1, bottom, left, -20px, -30px);
+        width: 120px;
+        height: 90px;
+        border-radius: 20px;
+        background: v.$white-co;
+        rotate: z 7deg;
+        transition: rotate .22s;
+
+        &-icon {
+          width: 36px;
+          height: 23px;
+          fill: v.$black-co;
+          rotate: z -7deg;
+          translate: 12px -3px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          rotate: z -7deg;
+          scale: 1.3;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 8px 20px 12px color.adjust(v.$black-co, $alpha: -0.75), inset 0 -5px 70px 25px color.adjust(v.$black-co, $alpha: -0.8);
+        border: 1px solid v.$white-co;
+      }
+
+      @media (max-width: v.$media_min) {
+        width: 300px;
+      }
+    }
+  }
+}
