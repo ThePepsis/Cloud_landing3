@@ -1,0 +1,131 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'sass:color';
+
+.testimonials {
+  text-align: center;
+
+  &__title {
+    margin: 300px 0 100px;
+    @include m.font(60px, 400, v.$white-co);
+
+    @media (max-width: v.$media-sm) {
+      margin: 150px 0 60px;
+      font-size: 35px;
+    }
+  }
+
+  .slider {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    @include m.d-flex(center, center, nowrap, row, min(80px, 3vw));
+
+    &__btn {
+      flex-shrink: 0;
+      width: 65px;
+      height: 65px;
+      border-radius: 20px;
+      rotate: z 45deg;
+      background: color.adjust(v.$white-co, $alpha: -0.8);
+      transition: scale .2s;
+
+      &-arrow-icon {
+        width: 36px;
+        height: 23px;
+        fill: v.$white-co;
+
+        &--left {
+          rotate: z 135deg;
+        }
+
+        &--right {
+          rotate: z -45deg;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        scale: 1.2;
+      }
+
+      @media (max-width: v.$media-md) {
+        margin: 0 30px;
+        width: 53px;
+        height: 53px;
+
+        &--left {
+          @include m.position(absolute, 1, -1, bottom, left, -70px, 0);
+        }
+
+        &--right {
+          @include m.position(absolute, 1, -1, bottom, right, -70px, 0);
+        }
+      }
+    }
+
+    .slide {
+      margin: 0 0 0 20px;
+      overflow: hidden;
+      width: 500px;
+      height: 275px;
+      flex-shrink: 0;
+      @include m.d-flex(start, start, nowrap, column, 0, 0);
+      background: url(../assets/webp/rectangle.webp) center/contain no-repeat;
+
+      &__avatar {
+        margin: 20px 0 0 20px;
+        border-radius: 50%;
+      }
+
+      &__text {
+        margin: 30px 50px;
+        text-align: left;
+        line-height: 30px;
+        @include m.font(20px, 400, v.$white-co);
+      }
+
+      @media (max-width: v.$media-md) {
+        margin: 0;
+        width: 330px;
+        height: 175px;
+        background: url(../assets/webp/rectangle.webp) 50% 0 / contain no-repeat;
+
+        &__avatar {
+          margin: 10px 0 0 10px;
+          height: 40px;
+        }
+
+        &__text {
+          margin: 18px 30px;
+          line-height: 18px;
+          @include m.font(13px, 400, v.$white-co);
+        }
+      }
+    }
+
+    &__dots {
+      @include m.d-flex(center, center, nowrap, row, 9px);
+      @include m.position(absolute, 1, -1, bottom, left, -200px, 50%);
+      translate: -50% 0;
+
+      &-item {
+        cursor: pointer;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: v.$white-co;
+
+        &:hover {
+          scale: .7;
+          background: v.$gray-co;
+        }
+      }
+
+      @media (max-width: v.$media-md) {
+        @include m.position(absolute, 1, -1, bottom, left, -50px, 50%);
+      }
+    }
+  }
+
+}
