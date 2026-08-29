@@ -1,3 +1,6 @@
+@use 'sass:color';
+
+$light-blue-co: color.adjust(#fff, $alpha: -0.8);
 $blue-co: #678FF2;
 $white-co: #fff;
 $black-co: #000;

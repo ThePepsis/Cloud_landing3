@@ -1,6 +1,5 @@
 @use 'variables' as v;
 @use 'mixins' as m;
-@use 'sass:color';
 
 .testimonials {
   text-align: center;
@@ -28,7 +27,7 @@
       height: 65px;
       border-radius: 20px;
       rotate: z 45deg;
-      background: color.adjust(v.$white-co, $alpha: -0.8);
+      background: v.$light-blue-co;
       transition: scale .2s;
 
       &-arrow-icon {

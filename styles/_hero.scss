@@ -1,7 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
 @use "placeholders";
-@use "sass:color";
 
 .hero {
   position: relative;
@@ -75,7 +74,7 @@
     position: relative;
     width: 650px;
     height: 70px;
-    background: color.adjust(v.$white-co, $alpha: -0.8);
+    background: v.$light-blue-co;
     border-radius: 20px;
     @include m.d-flex(end, center, nowrap, row, 10px);
 

@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet">
 
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="dist/index.css">
@@ -257,14 +257,61 @@
       <div class="container">
         <form action="mailto:thepepsis@mail.ru" method="get" class="form" aria-labelledby="form-title">
           <label for="nameID" id="form-title" class="form__title">Ready to get started? Drop us a line!</label>
-          <input type="text" id="nameID" class="form__name" placeholder="Name" name="firstName" autocomplete="name" aria-required="true" required>
-          <input type="email" id="emailID" class="form__email" placeholder="Email" name="Email" autocomplete="email" aria-required="true" required>
-          <input type="text" id="textID" class="form__text" placeholder="What we can do for you?" name="Text" autocomplete="off" aria-required="true" required>
+          <input type="text" id="nameID" class="form__name" placeholder="Name" name="firstName" autocomplete="name"
+            aria-required="true" required>
+          <input type="email" id="emailID" class="form__email" placeholder="Email" name="Email" autocomplete="email"
+            aria-required="true" required>
+          <input type="text" id="textID" class="form__text" placeholder="What we can do for you?" name="Text"
+            autocomplete="off" aria-required="true" required>
           <button type="submit" class="form__submit-btn">Send</button>
         </form>
       </div>
     </section>
   </main>
+
+
+  <footer class="footer-section" aria-label="footer section">
+    <div class="container">
+      <div class="footer">
+
+        <section class="footer__info" aria-label="additional information">
+          <div class="footer__info-links">
+            <a href="#" class="footer__info-link" aria-label="read Terms of Use">
+              <h3>Terms of Use</h3>
+            </a>
+            <a href="#" class="footer__info-link" aria-label="read Privacy Policy">
+              <h3>Privacy Policy</h3>
+            </a>
+          </div>
+
+          <h4 class="footer__info-desc">© CloudFlex 2024. All Rights Reserved.</h4>
+        </section>
+
+        
+        <address class="footer__contacts contact" aria-label="our social media contacts">
+          
+          <a href="https://www.linkedin.com/" class="contact__link" aria-label="link to linkedin.com" target="_blank">
+            <svg class="contact__link-icon">
+              <use href="assets/sprites.svg#linkedin-icon"></use>
+            </svg>
+          </a>
+
+          <a href="https://www.facebook.com/" class="contact__link" aria-label="link to facebook.com" target="_blank">
+            <svg class="contact__link-icon">
+              <use href="assets/sprites.svg#facebook-icon"></use>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/" class="contact__link" aria-label="link to instagram.com" target="_blank">
+            <svg class="contact__link-icon">
+              <use href="assets/sprites.svg#inst-icon"></use>
+            </svg>
+          </a>
+
+        </address>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -34,7 +34,7 @@
       @include m.font(25px);
 
       &::placeholder {
-        @include m.font(25px, 100, v.$gray-co);
+        @include m.font(25px, 300, v.$gray-co);
       }
     }
 
@@ -72,7 +72,7 @@
     width: 700px;
     height: 250px;
     background: url(../assets/webp/cloud.webp) center / contain no-repeat;
-    @include m.position(absolute, 1, -1, top, left, 70px, -250px);
+    @include m.position(absolute, -1, -1, top, left, 70px, -250px);
   }
 
   &::after {
@@ -80,16 +80,16 @@
     width: 1120px;
     height: 400px;
     background: url(../assets/webp/cloud.webp) center / contain no-repeat;
-    @include m.position(absolute, 1, -1, bottom, right, -100px, -550px);
+    @include m.position(absolute, -1, -1, bottom, right, -100px, -550px);
   }
 
   @media (max-width: v.$media-xl) {
     &::before {
-      @include m.position(absolute, 1, -1, top, left, 70px, -250px);
+      @include m.position(absolute, -1, -1, top, left, 70px, -250px);
     }
 
     &::after {
-      @include m.position(absolute, 1, -1, bottom, right, -200px, -550px);
+      @include m.position(absolute, -1, -1, bottom, right, -120px, -550px);
     }
   }
 
@@ -99,13 +99,13 @@
     &::before {
       width: 440px;
       height: 160px;
-      @include m.position(absolute, 1, -1, top, left, -10px, -250px);
+      @include m.position(absolute, -1, -1, top, left, -10px, -250px);
     }
 
     &::after {
       width: 300px;
       height: 100px;
-      @include m.position(absolute, 1, -1, bottom, right, 30px, -120px);
+      @include m.position(absolute, -1, -1, bottom, right, 30px, -120px);
     }
   }
 }

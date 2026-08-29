@@ -1,0 +1,54 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+
+.footer-section {
+  padding: 0 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: v.$light-blue-co;
+
+
+  .footer {
+    height: 140px;
+    @include m.d-flex(space-between, center, nowrap, row);
+
+    &__info {
+
+      &-links {
+        margin: 10px 0;
+        @include m.d-flex(start, center, nowrap, row, 40px, 0);
+      }
+
+      &-link {
+        position: relative;
+        
+        h3 {
+          @include m.font(20px, 400, v.$white-co);
+          @extend %hover-black;
+          @extend %after-black-line;
+        }
+      }
+
+      &-desc {
+        @include m.font(14px, 300, v.$white-co);
+      }
+    }
+
+    .contact {
+      @include m.d-flex(space-between, center, nowrap, row, 45px, 0);
+
+      &__link {
+        &-icon {
+          width: 25px;
+          height: 23px;
+          fill: v.$white-co;
+          @extend %hover-black-icon;
+        }
+      }
+    }
+
+    @media (max-width: v.$media-sm) {
+      @include m.d-flex(center, center, nowrap, column-reverse, 0, 0);
+    }
+  }
+}

@@ -27,7 +27,7 @@
       border-radius: 10px;
       overflow: hidden;
       flex-shrink: 0;
-      background: color.adjust(v.$white-co, $alpha: -0.8);
+      background: v.$light-blue-co;
       @include m.d-flex(space-between, center, nowrap, column);
 
       &__title {
