@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -26,6 +30,10 @@ blockquote {
 button, input {
   outline: none;
   border: none;
+}
+
+input[name=toggler] {
+  display: none;
 }
 
 a {
@@ -63,7 +71,7 @@ hr {
   color: #fff;
 }
 
-.footer-section .footer .contact__link-icon:hover, .header .nav .earth__link-icon:hover {
+.footer-section .footer .contact__link-icon:hover, .header .nav .earth__link-icon:hover, .mob-menu__burger-icon:hover {
   fill: #000;
 }
 
@@ -84,6 +92,20 @@ hr {
 }
 .footer-section .footer__info-link h3:hover::after, .header .nav__links .list__item-link:hover::after {
   right: 0;
+}
+
+.mob-menu__nav .list__item-link::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  height: 1px;
+  transition: left 0.22s;
+}
+.mob-menu__nav .list__item-link:hover::after {
+  left: 0;
 }
 
 .header {
@@ -198,6 +220,71 @@ hr {
   width: 27px;
   height: 28px;
   fill: #fff;
+}
+@media (max-width: 768px) {
+  .header .nav__links,
+  .header .nav .covid,
+  .header .nav .earth {
+    display: none;
+  }
+}
+
+.mob-menu {
+  display: none;
+}
+.mob-menu__toggler:checked + .mob-menu__nav {
+  translate: 0;
+}
+.mob-menu__burger {
+  position: absolute;
+  z-index: 99;
+  top: 13px;
+  right: 30px;
+}
+.mob-menu__burger-icon {
+  width: 27px;
+  height: 22px;
+  fill: #fff;
+}
+.mob-menu__nav {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  translate: 100% 0;
+  transition: translate 0.22s;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.mob-menu__nav .list {
+  padding: 200px 0 0;
+}
+.mob-menu__nav .list__item {
+  margin: 0 0 30px;
+}
+.mob-menu__nav .list__item-link {
+  position: relative;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  font-style: normal;
+}
+.mob-menu__nav-close {
+  position: absolute;
+  z-index: 99;
+  top: 13px;
+  right: 30px;
+}
+.mob-menu__nav-close-icon {
+  width: 25px;
+  height: 22px;
+  stroke: #fff;
+}
+@media (max-width: 768px) {
+  .mob-menu {
+    display: block;
+  }
 }
 
 .hero {

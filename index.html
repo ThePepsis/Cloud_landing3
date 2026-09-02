@@ -49,6 +49,45 @@
         </div>
       </nav>
     </div>
+
+    <div class="mob-menu" aria-label="mobile menu">
+      <label for="checkbox-id" class="mob-menu__burger">
+        <svg class="mob-menu__burger-icon">
+          <use href="assets/sprites.svg#burger-icon"></use>
+        </svg>
+      </label>
+
+<input type="checkbox" class="mob-menu__toggler" name="toggler" id="checkbox-id">
+
+      <nav class="mob-menu__nav">
+        <ul class="mob-menu__nav-list list">
+          <li class="list__item">
+            <a href="#about-id" class="list__item-link" aria-label="info about us">About Us</a>
+          </li>
+          <li class="list__item">
+            <a href="#info-id" class="list__item-link" aria-label="info about our product">Product Info</a>
+          </li>
+          <li class="list__item">
+            <a href="#experience-id" class="list__item-link" aria-label="user experience">Experience</a>
+          </li>
+          <li class="list__item">
+            <a href="#testimonials-id" class="list__item-link" aria-label="testimonials">Testimonials</a>
+          </li>
+          <li class="list__item">
+            <a href="#form-id" class="list__item-link" aria-label="form">Form</a>
+          </li>
+          <li class="list__item">
+            <a href="#contact-id" class="list__item-link" aria-label="contact us">Contact</a>
+          </li>
+        </ul>
+
+        <label for="checkbox-id" class="mob-menu__nav-close">
+          <svg class="mob-menu__nav-close-icon">
+            <use href="assets/sprites.svg#cross-icon"></use>
+          </svg>
+        </label>
+      </nav>
+    </div>
   </header>
 
 
@@ -73,7 +112,7 @@
     </section>
 
 
-    <section class="about" aria-label="about section">
+    <section class="about" id="about-id" aria-label="about section">
       <div class="container">
         <h2 class="about__title">How we work</h2>
         <div class="about__cards">
@@ -134,7 +173,7 @@
 
 
     <hr>
-    <section class="info" aria-label="info section">
+    <section class="info" id="info-id" aria-label="info section">
       <div class="container">
         <div class="info__quality">
           <h3 class="info__quality-title info--title">High Quality</h3>
@@ -159,7 +198,7 @@
     <hr>
 
 
-    <section class="experience" aria-label="experience section">
+    <section class="experience" id="experience-id" aria-label="experience section">
       <div class="container">
         <h2 class="experience__title">Our experience</h2>
         <div class="experience__cards-wrapper">
@@ -199,7 +238,7 @@
     </section>
 
 
-    <section class="testimonials" aria-label="testimonials section">
+    <section class="testimonials" id="testimonials-id" aria-label="testimonials section">
       <div class="container">
         <h2 class="testimonials__title">Testimonials</h2>
         <div class="testimonials__slider slider">
@@ -253,7 +292,7 @@
     </section>
 
 
-    <section class="form-section" aria-label="form section">
+    <section class="form-section" id="form-id" aria-label="form section">
       <div class="container">
         <form action="mailto:thepepsis@mail.ru" method="get" class="form" aria-labelledby="form-title">
           <label for="nameID" id="form-title" class="form__title">Ready to get started? Drop us a line!</label>
@@ -270,7 +309,7 @@
   </main>
 
 
-  <footer class="footer-section" aria-label="footer section">
+  <footer class="footer-section" id="contact-id" aria-label="footer section">
     <div class="container">
       <div class="footer">
 
