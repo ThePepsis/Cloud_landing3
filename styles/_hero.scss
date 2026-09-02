@@ -71,7 +71,9 @@
 
   &__notify {
     margin: 170px auto 0;
-    position: relative;
+    @include m.position(fixed, 9999, -1, bottom, left, 10%, 50%);
+    translate: -50% 0;
+    // position: relative;
     width: 650px;
     height: 70px;
     background: v.$light-blue-co;
@@ -94,12 +96,17 @@
       width: 120px;
       height: 100%;
       border-left: 1px solid v.$white-co;
-      text-transform: uppercase;
+      @include m.d-flex();
       @include m.font(25px, 400);
+      text-transform: uppercase;
       background: transparent;
 
       cursor: pointer;
       @extend %hover-white, %focus-v;
+    }
+
+    &:has(#accept-btn-id:checked) {
+      display: none;
     }
 
     @media (max-width: v.$media-md) {
@@ -182,6 +189,4 @@
     padding: 110px 10px 50px;
     background: url(../assets/webp/cloud.webp) 0 25%/contain no-repeat;
   }
-
-  @media (max-width: v.$media_sm) {}
 }

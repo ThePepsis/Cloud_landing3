@@ -28,10 +28,10 @@
         <div class="nav__links">
           <ul class="nav__links-list list" aria-label="header navigation links">
             <li class="list__item">
-              <a href="#" class="list__item-link" aria-label="info about us">about us</a>
+              <a href="#about-id" class="list__item-link" aria-label="info about us">about us</a>
             </li>
             <li class="list__item">
-              <a href="#" class="list__item-link" aria-label="contact us">contact</a>
+              <a href="#contact-id" class="list__item-link" aria-label="contact us">contact</a>
             </li>
           </ul>
         </div>
@@ -51,13 +51,13 @@
     </div>
 
     <div class="mob-menu" aria-label="mobile menu">
-      <label for="checkbox-id" class="mob-menu__burger">
+      <label for="burger-id" class="mob-menu__burger">
         <svg class="mob-menu__burger-icon">
           <use href="assets/sprites.svg#burger-icon"></use>
         </svg>
       </label>
 
-<input type="checkbox" class="mob-menu__toggler" name="toggler" id="checkbox-id">
+      <input type="checkbox" class="mob-menu__toggler" name="toggler" id="burger-id">
 
       <nav class="mob-menu__nav">
         <ul class="mob-menu__nav-list list">
@@ -81,7 +81,7 @@
           </li>
         </ul>
 
-        <label for="checkbox-id" class="mob-menu__nav-close">
+        <label for="burger-id" class="mob-menu__nav-close">
           <svg class="mob-menu__nav-close-icon">
             <use href="assets/sprites.svg#cross-icon"></use>
           </svg>
@@ -103,11 +103,12 @@
         <img src="assets/webp/pigeon.webp" alt="hungry pigeon" class="hero__notify-img">
         <p class="hero__notify-text">WE USE COOKIES TO ENSURE YOUR BEST EXPERIENCE. THROUGH YOUR CONTINUED USE
           OF THIS SITE YOU ACCEPT THIS USE. FOR MORE INFORMATION, PLEASE SEE OUR PRIVACY POLICY.</p>
-        <button class="hero__notify-btn">ACCEPT</button>
+        <label class="hero__notify-btn" for="accept-btn-id">ACCEPT</label>
+        <input type="checkbox" class="hero__notify-toggler" name="toggler" id="accept-btn-id">
       </div>
 
       <div class="hero__scroll">
-        <span class="hero__scroll-content">Scroll down</span>
+        <a class="hero__scroll-content" href="#about-id">Scroll down</a>
       </div>
     </section>
 
@@ -326,9 +327,9 @@
           <h4 class="footer__info-desc">© CloudFlex 2024. All Rights Reserved.</h4>
         </section>
 
-        
+
         <address class="footer__contacts contact" aria-label="our social media contacts">
-          
+
           <a href="https://www.linkedin.com/" class="contact__link" aria-label="link to linkedin.com" target="_blank">
             <svg class="contact__link-icon">
               <use href="assets/sprites.svg#linkedin-icon"></use>

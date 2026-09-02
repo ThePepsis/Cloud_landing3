@@ -4,6 +4,8 @@
 @use "sass:color";
 
 .header {
+  position: fixed;
+  z-index: 9;
   width: 100%;
   height: 50px;
   background: v.$light-blue-co;
