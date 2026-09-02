@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -28,6 +32,10 @@ blockquote {
 button, input {
   outline: none;
   border: none;
+}
+
+input[name='toggler'] {
+  display: none;
 }
 
 a {

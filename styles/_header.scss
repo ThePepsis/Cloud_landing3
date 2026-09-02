@@ -1,6 +1,7 @@
 @use "variables" as v;
 @use "mixins" as m;
 @use "placeholders";
+@use "sass:color";
 
 .header {
   width: 100%;
@@ -96,5 +97,72 @@
         }
       }
     }
+
+    &__links,
+    .covid,
+    .earth {
+      @media (max-width: v.$media-md) {
+        display: none;
+      }
+    }
+  }
+}
+
+.mob-menu {
+  display: none;
+
+  &__toggler {
+    &:checked+.mob-menu__nav {
+      translate: 0;
+    }
+  }
+
+  &__burger {
+    @include m.position(absolute, 99, -1, top, right, 13px, 30px);
+
+    &-icon {
+      width: 27px;
+      height: 22px;
+      fill: v.$white-co;
+      @extend %hover-black-icon;
+    }
+  }
+
+  &__nav {
+    @include m.position(fixed, 999, 0);
+    translate: 100% 0;
+    transition: translate .22s;
+    text-align: center;
+    background: color.adjust(v.$black-co, $alpha: -0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .list {
+      padding: 200px 0 0;
+
+      &__item {
+        margin: 0 0 30px;
+
+        &-link {
+          position: relative;
+          @include m.font(30px, 400, v.$white-co);
+          @extend %after-white-line;
+        }
+      }
+    }
+
+    &-close {
+      @include m.position(absolute, 99, -1, top, right, 13px, 30px);
+
+      &-icon {
+        width: 25px;
+        height: 22px;
+        stroke: v.$white-co;
+      }
+    }
+  }
+
+  @media (max-width: v.$media-md) {
+    display: block;
   }
 }
