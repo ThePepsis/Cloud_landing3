@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="dist/index.css">
   <title>Cloud Streaming</title>
 </head>
@@ -50,7 +50,7 @@
       </nav>
     </div>
 
-    <div class="mob-menu" aria-label="mobile menu">
+    <div class="mob-menu">
       <label for="burger-id" class="mob-menu__burger">
         <svg class="mob-menu__burger-icon">
           <use href="assets/sprites.svg#burger-icon"></use>
@@ -244,14 +244,6 @@
         <h2 class="testimonials__title">Testimonials</h2>
         <div class="testimonials__slider slider">
 
-          <!-- <figure class="slide slide--left">
-            <img src="assets/webp/avatar.webp" alt="user avatar" class="slide__avatar">
-            <blockquote class="slide__text">
-              Норм отзыв, который оставил довольный клиент. <br> A тут я ещё не придумал что написать, поэтому
-              просто добавил это предложение.
-            </blockquote>
-          </figure> -->
-
           <button class="slider__btn slider__btn--left" aria-label="left slide button">
             <svg class="slider__btn-arrow-icon slider__btn-arrow-icon--left">
               <use href="assets/sprites.svg#arrow-icon"></use>
@@ -272,14 +264,6 @@
             </svg>
           </button>
 
-          <!-- <figure class="slide slide--right">
-            <img src="assets/webp/avatar.webp" alt="user avatar" class="slide__avatar">
-            <blockquote class="slide__text">
-              Негативный отзыв, который оставил довольный клиент. <br> A тут я ещё не придумал что написать, поэтому
-              просто добавил это предложение.
-            </blockquote>
-          </figure> -->
-
           <ul class="slider__dots">
             <li class="slider__dots-item"></li>
             <li class="slider__dots-item"></li>
@@ -297,12 +281,10 @@
       <div class="container">
         <form action="mailto:thepepsis@mail.ru" method="get" class="form" aria-labelledby="form-title">
           <label for="nameID" id="form-title" class="form__title">Ready to get started? Drop us a line!</label>
-          <input type="text" id="nameID" class="form__name" placeholder="Name" name="firstName" autocomplete="name"
-            aria-required="true" required>
-          <input type="email" id="emailID" class="form__email" placeholder="Email" name="Email" autocomplete="email"
-            aria-required="true" required>
+          <input type="text" id="nameID" class="form__name" placeholder="Name" name="firstName" autocomplete="name" required>
+          <input type="email" id="emailID" class="form__email" placeholder="Email" name="Email" autocomplete="email" required>
           <input type="text" id="textID" class="form__text" placeholder="What we can do for you?" name="Text"
-            autocomplete="off" aria-required="true" required>
+            autocomplete="off" required>
           <button type="submit" class="form__submit-btn">Send</button>
         </form>
       </div>
