@@ -70,10 +70,10 @@
   }
 
   &__notify {
-    margin: 170px auto 0;
+    // margin: 170px auto 0;
+    // position: relative;
     @include m.position(fixed, 9999, -1, bottom, left, 10%, 50%);
     translate: -50% 0;
-    // position: relative;
     width: 650px;
     height: 70px;
     background: v.$light-blue-co;
@@ -95,6 +95,7 @@
     &-btn {
       width: 120px;
       height: 100%;
+      padding: 15px 0;
       border-left: 1px solid v.$white-co;
       @include m.d-flex();
       @include m.font(25px, 400);
@@ -127,9 +128,7 @@
       }
 
       &-btn {
-        padding: 15px 0;
         width: 100%;
-
         border: {
           left: none;
           top: 1px solid v.$white-co;

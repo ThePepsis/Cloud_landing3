@@ -2,6 +2,7 @@
 @use 'mixins' as m;
 
 .info {
+  overflow: hidden;
   padding: 150px 10px 0;
 
   &--title {
