@@ -16,7 +16,7 @@
   }
 
   .slider {
-    max-width: 500px;
+    // max-width: 500px;
     margin: 0 auto;
     position: relative;
     @include m.d-flex(center, center, nowrap, row, min(80px, 3vw));
