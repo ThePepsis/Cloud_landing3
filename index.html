@@ -245,7 +245,7 @@
       <div class="container">
         <h2 class="testimonials__title">Testimonials</h2>
 
-<!-- Bootstrap carousel -->
+        <!-- Bootstrap carousel -->
         <div id="carouselExampleFade" class="slider carousel carousel-fade">
 
           <button class="slider__btn slider__btn--left" aria-label="left slide button"
@@ -294,7 +294,15 @@
               <use href="assets/sprites.svg#arrow-icon"></use>
             </svg>
           </button>
-
+          
+          <div class="slider__indicators carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
         </div>
 
         <!-- <div class="testimonials__slider slider">

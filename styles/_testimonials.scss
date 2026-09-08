@@ -104,6 +104,14 @@
       }
     }
 
+    &__indicators {
+      @include m.position(absolute, 1, -1, bottom, left, -200px, 0);
+
+      @media (max-width: v.$media-md) {
+        bottom: -75px;
+      }
+    }
+
     &__dots {
       @include m.d-flex(center, center, nowrap, row, 9px);
       @include m.position(absolute, 1, -1, bottom, left, -200px, 50%);
@@ -116,7 +124,7 @@
         border-radius: 50%;
         background: v.$white-co;
 
-        &:hover {
+        &:focus {
           scale: .7;
           background: v.$gray-co;
         }
