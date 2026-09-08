@@ -17,7 +17,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
     row-gap: min(70px, 10vw);
-    column-gap: min(190px, 5vh);
+    column-gap: 3vh;
     grid-template-areas:
       'bulb design dev'
       'maintenance testing integration'
@@ -27,7 +27,9 @@
       padding: 10px;
       width: 180px;
       height: 200px;
+      border: none;
       border-radius: 20px;
+      line-height: 18px;
       background: v.$light-blue-co;
       @include m.d-flex(center, center, nowrap, column, 0, 5px);
       cursor: pointer;
