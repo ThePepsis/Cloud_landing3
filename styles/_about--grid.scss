@@ -24,7 +24,7 @@
     ;
 
     .card {
-      padding: 10px;
+      padding: 5px;
       width: 180px;
       height: 200px;
       border: none;
@@ -47,6 +47,7 @@
       &__desc {
         text-align: center;
         @include m.font(16px, 300);
+        max-width: 150px;
       }
 
       &:hover {
@@ -100,9 +101,9 @@
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-          'bulb design'
-          'dev maintenance'
-          'testing integration'
+          'dev bulb'
+          'design maintenance'
+          'integration testing'
         ;
 
         .card--bulb,
